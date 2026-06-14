@@ -27,7 +27,6 @@
 </head>
 <body class="text-slate-200 min-h-screen flex flex-col justify-between">
 
-    <!-- TOP HEADER / BRAND BAR -->
     <header class="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-md px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center space-x-4">
@@ -53,7 +52,6 @@
         </div>
     </header>
 
-    <!-- PAYMENT CONTENT INTERFACE -->
     <main class="flex-grow flex items-center justify-center px-4 py-12">
         <div class="w-full max-w-md bg-slate-900/60 backdrop-blur-xl p-8 rounded-2xl premium-border shadow-2xl space-y-6">
             
@@ -65,65 +63,55 @@
                 <p class="text-xs text-slate-400 mt-1">Deploy your authentication credentials to unlock the AI platform node.</p>
             </div>
 
-            <!-- PRICING TIERS METRIC INFO CARD (DYNAMIC WITH PROMO) -->
             <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center relative overflow-hidden">
                 <span class="text-[10px] tracking-widest font-bold uppercase text-slate-500 block">Premium System Access Fee</span>
                 
-                <!-- Strike-through price (Hidden by default, shows when promo applied) -->
                 <div id="originalPriceStrike" class="hidden text-sm text-slate-500 line-through font-bold mt-1">Rs. 1,000 / $5</div>
                 
-                <!-- Main Display Price -->
                 <div id="priceDisplay" class="text-3xl font-extrabold text-white transition-all duration-300">Rs. 1,000 / $5 <span class="text-xs font-medium text-slate-400">/ Month</span></div>
                 
-                <!-- Discount Badge -->
                 <div id="discountBadge" class="hidden bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full mt-1.5 inline-block animate-pulse">
                     ⚡ 60% SPECIAL DISCOUNT APPLIED
                 </div>
             </div>
 
-            <!-- PAYMENT CHANNELS META DETAILS (REAL GENUIEN PLACEHOLDER) -->
             <div class="space-y-3">
                 <div class="bg-slate-950/40 p-4 rounded-xl border border-slate-800/60 text-sm space-y-2">
                     <div class="flex justify-between items-center border-b border-slate-800/60 pb-2">
                         <span class="font-medium text-slate-400">Account Type:</span>
-                        <span class="font-bold text-white text-xs uppercase tracking-wider bg-slate-900 px-2 py-0.5 rounded">JazzCash / Easypaisa</span>
+                        <span class="font-bold text-white text-xs uppercase tracking-wider bg-slate-900 px-2 py-0.5 rounded">JazzCash Only</span>
                     </div>
-                   <div style="background-color: rgba(255, 193, 7, 0.1); border: 1px solid #ffc107; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
-    
-    <!-- Local Payment: JazzCash Only -->
-    <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px; display: flex; align-items: center;">
-        🇵🇰 LOCAL WALLET (JAZZCASH ONLY):
-    </p>
-    <div style="color: #fff; margin: 0 0 15px 15px; font-size: 14px; line-height: 1.6;">
-        <strong>Account Number:</strong> <span style="color: #00e6ff;">03702210841</span><br>
-        <strong>Account Title:</strong> <span style="color: #00e6ff;">Shehnaz Kanwal</span>
-    </div>
+                    <div style="background-color: rgba(255, 193, 7, 0.1); border: 1px solid #ffc107; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+                        
+                        <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px; display: flex; align-items: center;">
+                            🇵🇰 LOCAL WALLET (JAZZCASH ONLY):
+                        </p>
+                        <div style="color: #fff; margin: 0 0 15px 15px; font-size: 14px; line-height: 1.6;">
+                            <strong>Account Number:</strong> <span style="color: #00e6ff;">03702210841</span><br>
+                            <strong>Account Title:</strong> <span style="color: #00e6ff;">Shehnaz Kanwal</span>
+                        </div>
 
-    <hr style="border: 0; border-top: 1px solid rgba(255,193,7,0.2); margin: 15px 0;">
+                        <hr style="border: 0; border-top: 1px solid rgba(255,193,7,0.2); margin: 15px 0;">
 
-    <!-- Crypto Payments -->
-    <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">
-        🌐 INTERNATIONAL / CRYPTO NETWORK:
-    </p>
-    
-    <div style="margin: 0 0 12px 15px;">
-        <span style="color: #fff; font-size: 14px;"><strong>USDT (BEP20 Address):</strong></span><br>
-        <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">0x8c416a29b7b0f25b4da185f937a916e29f243333</code>
-    </div>
-    
-    <div style="margin: 0 0 0 15px;">
-        <span style="color: #fff; font-size: 14px;"><strong>TRX / USDT (TRC20 Address):</strong></span><br>
-        <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">TE7sRfKLxY2qSM5MYMCSddJ3ZztFgDhf8B</code>
-    </div>
-
-</div>
+                        <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">
+                            🌐 INTERNATIONAL / CRYPTO NETWORK:
+                        </p>
+                        
+                        <div style="margin: 0 0 12px 15px;">
+                            <span style="color: #fff; font-size: 14px;"><strong>USDT (BEP20 Address):</strong></span><br>
+                            <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">0x8c416a29b7b0f25b4da185f937a916e29f243333</code>
+                        </div>
+                        
+                        <div style="margin: 0 0 0 15px;">
+                            <span style="color: #fff; font-size: 14px;"><strong>TRX / USDT (TRC20 Address):</strong></span><br>
+                            <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">TE7sRfKLxY2qSM5MYMCSddJ3ZztFgDhf8B</code>
+                        </div>
+                    </div>
                 </div>
                 <div class="text-[10px] text-slate-500 text-center uppercase tracking-wider font-semibold">International clients can settle node weights via Stripe / Crypto.</div>
             </div>
 
-            <!-- TRANSACTION FORMS MATRIX -->
             <div class="space-y-4 pt-2 border-t border-slate-800/60">
-                <!-- PROMO CODE INPUT SECTION -->
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5">Have a VIP Promo Code?</label>
                     <div class="flex space-x-2">
@@ -180,7 +168,6 @@
                 isPromoApplied = true;
                 promoLog.style.color = "#10b981"; promoLog.innerText = "Success! Code authenticated successfully.";
                 
-                // Update pricing interface dynamically (60% Off of 1000 is 400)
                 originalPriceStrike.classList.remove('hidden');
                 priceDisplay.innerHTML = `Rs. 400 / $2 <span class="text-xs font-medium text-slate-400">/ Month</span>`;
                 priceDisplay.classList.add('text-emerald-400');
@@ -215,7 +202,8 @@
                 payloadForm.append('trx_id', transactionId);
                 payloadForm.append('promo_applied', isPromoApplied ? "YES_60" : "NO");
 
-                await fetch(https://script.google.com/macros/s/AKfycbxVat0grR85wM0ueeMdXmr8uKYjb_8irZeLRLVtfz_6XTKFf3AAICahfIC0hX1scaWA/exec, {
+                // ✅ FIX: Added missing quotes around Google Web App URL
+                await fetch('https://script.google.com/macros/s/AKfycbxVat0grR85wM0ueeMdXmr8uKYjb_8irZeLRLVtfz_6XTKFf3AAICahfIC0hX1scaWA/exec', {
                     method: 'POST',
                     body: payloadForm,
                     mode: 'no-cors'
@@ -226,7 +214,8 @@
                 logBox.innerHTML = `Transaction Received! <br><span class="text-slate-400 font-light text-[11px]">Allow up to 10s for Background Automation verification rulesets to map database elements.</span>`;
                 
                 setTimeout(() => {
-                    window.location.href = "index.html?email=" + encodeURIComponent(mailParam);
+                    // ✅ FIX: Redirecting to verifyemail.html instead of loop index.html
+                    window.location.href = "verifyemail.html?email=" + encodeURIComponent(mailParam);
                 }, 4000);
 
             } catch (err) {
