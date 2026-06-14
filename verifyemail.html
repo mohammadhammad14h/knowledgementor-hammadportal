@@ -27,11 +27,9 @@
 </head>
 <body class="text-slate-200 min-h-screen flex flex-col justify-between">
 
-    <!-- TOP HEADER / BRAND BAR -->
     <header class="border-b border-slate-800/80 bg-slate-950/70 backdrop-blur-md sticky top-0 z-50 px-4 sm:px-6 py-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             
-            <!-- BRAND LOGO INTEGRATION -->
             <div class="flex items-center space-x-4">
                 <img src="image_6834c2.jpg" alt="KnowledgeMentor Logo" class="w-12 h-12 rounded-xl object-cover border border-slate-700 shadow-md">
                 <div>
@@ -40,14 +38,12 @@
                 </div>
             </div>
 
-            <!-- COMMUNITY TRAFFIC HUB (WHATSAPP CONVERSION) -->
             <div class="flex items-center space-x-3">
                 <a href="https://whatsapp.com/channel/0029VbBvsvK9hXF3tG3ImA3l" target="_blank" class="bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 font-semibold text-xs px-4 py-2 rounded-xl shadow-lg transition-all flex items-center space-x-2 animate-bounce hover:animate-none">
                     <span class="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-ping"></span>
                     <span>Join Official WhatsApp Network</span>
                 </a>
 
-                <!-- FOUNDER AVATAR INTEGRATION -->
                 <div class="flex items-center space-x-3 border-l border-slate-800 pl-4">
                     <div class="text-right hidden md:block">
                         <p class="text-[9px] uppercase tracking-widest text-slate-500 font-bold">System Founder</p>
@@ -59,11 +55,9 @@
         </div>
     </header>
 
-    <!-- MAIN CORE CONTAINER -->
     <main class="flex-grow flex items-center justify-center px-4 py-12">
         <div class="w-full max-w-4xl">
             
-            <!-- GATEWAY LAYER 1: SECURE AUTH / LOCK -->
             <div id="authGateway" class="max-w-md mx-auto bg-slate-900/60 backdrop-blur-xl p-8 rounded-2xl premium-border shadow-2xl">
                 <div class="text-center mb-8">
                     <div class="inline-flex p-3 bg-sky-500/10 rounded-2xl text-sky-400 mb-4">
@@ -78,16 +72,14 @@
                         <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">License Authentication Node</label>
                         <input type="email" id="accessEmail" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-sky-500 transition-all text-sm font-mono" placeholder="user@domain.com">
                     </div>
-                    <button onclick="verifyNodeAccess()" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-sky-500/20 hover:opacity-95 transition-all text-sm tracking-wide glow-effect">
+                    <button id="verifyBtn" onclick="verifyNodeAccess()" class="w-full bg-gradient-to-r from-sky-500 to-indigo-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-sky-500/20 hover:opacity-95 transition-all text-sm tracking-wide glow-effect">
                         Verify Architecture Credentials
                     </button>
                     <div id="authLog" class="text-center text-xs font-semibold mt-2"></div>
                 </div>
             </div>
 
-            <!-- GATEWAY LAYER 2: ULTIMATE AI INTERFACE -->
             <div id="coreEngineSuite" class="hidden bg-slate-900/40 backdrop-blur-xl p-6 sm:p-8 rounded-2xl premium-border shadow-2xl space-y-6">
-                <!-- Status Row -->
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800/80 pb-4 gap-2">
                     <div>
                         <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Authorized Terminal Session</span>
@@ -99,7 +91,6 @@
                     </div>
                 </div>
 
-                <!-- Control Forms Framework -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Select High-Performance Framework Node</label>
@@ -135,7 +126,6 @@
                     <span id="btnText">Execute System-Locked Framework Pipeline</span>
                 </button>
 
-                <!-- SECURE RENDER TRACE UNIT -->
                 <div class="space-y-2">
                     <div class="flex justify-between items-center">
                         <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Cryptographic Compiler Output Pipeline</h4>
@@ -150,100 +140,12 @@
         </div>
     </main>
 
-    <!-- FOOTER TRACKING DEPLOYMENT -->
     <footer class="border-t border-slate-900 bg-slate-950/40 text-center py-5 px-6 text-xs text-slate-500 tracking-wider font-medium space-y-1">
         <div>&copy; 2026 <span class="text-slate-400 font-bold">KNOWLEDGEMENTOR LABS INC.</span> ARCHITECTURE DESIGNED BY <span class="text-sky-400 font-bold">M. HAMMAD</span>.</div>
         <div class="text-[10px] text-slate-600">GLOBAL ECOSYSTEM FOR CAREER AUTOMATION AND HIGH-TIER AI ANALYTICS.</div>
     </footer>
 
     <script>
-        const DEPLOYED_WEBAPP_ENDPOINT = "https://script.google.com/macros/s/AKfycbxVat0grR85wM0ueeMdXmr8uKYjb_8irZeLRLVtfz_6XTKFf3AAICahfIC0hX1scaWA/exec";
+        // Updated WebApp URL injected successfully
+        const DEPLOYED_WEBAPP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzp_46uLljXh5n2vAs8igyO-cf1Ga9oPvvLVJ-DADvv87t-MDtTjj3vTdaWn3anwrOX/exec";
         let confirmedUserSessionEmail = "";
-
-        async function verifyNodeAccess() {
-            const inputMail = document.getElementById('accessEmail').value.trim();
-            const logBox = document.getElementById('authLog');
-            
-            // Testing bypass mechanism: 'test@gmail.com' passes instantly without sheets check
-            if (inputMail.toLowerCase() === "test@gmail.com") {
-                logBox.style.color = "#10b981"; logBox.innerText = "Developer Flag Detected. Initializing Sandbox Testing Matrix...";
-                setTimeout(() => {
-                    confirmedUserSessionEmail = inputMail;
-                    document.getElementById('authGateway').classList.add('hidden');
-                    document.getElementById('coreEngineSuite').classList.remove('hidden');
-                    document.getElementById('sessionUser').innerText = "Sandbox_Testing_Mode";
-                    document.getElementById('sessionExpiry').innerText = "Valid Till: Unlimited Sandbox Trace";
-                }, 1000);
-                return;
-            }
-
-            if(!inputMail) { logBox.style.color = "#ef4444"; logBox.innerText = "Execution Blocked: Target context vector parameter required."; return; }
-            logBox.style.color = "#fbbf24"; logBox.innerText = "Interrogating live sheets manifest registry...";
-
-            try {
-                const targetUrl = `${DEPLOYED_WEBAPP_ENDPOINT}?action=check_access&email=${encodeURIComponent(inputMail)}`;
-                const response = await fetch(targetUrl);
-                const tokenResponse = await response.json();
-
-                if (tokenResponse.status === "access_granted") {
-                    logBox.style.color = "#10b981"; logBox.innerText = "Handshake Confirmed. Access permissions loaded.";
-                    setTimeout(() => {
-                        confirmedUserSessionEmail = inputMail;
-                        document.getElementById('authGateway').classList.add('hidden');
-                        document.getElementById('coreEngineSuite').classList.remove('hidden');
-                        document.getElementById('sessionUser').innerText = inputMail;
-                        let expiryInstance = new Date(tokenResponse.expiry);
-                        document.getElementById('sessionExpiry').innerText = "Valid Till: " + expiryInstance.toLocaleDateString();
-                    }, 1200);
-                } else {
-                    logBox.style.color = "#ef4444"; logBox.innerText = tokenResponse.message || "Cryptographic failure: Signature verification denied.";
-                    setTimeout(() => { window.location.href = "pay.html?email=" + encodeURIComponent(inputMail); }, 2500);
-                }
-            } catch (err) {
-                logBox.style.color = "#ef4444"; logBox.innerText = "Security lock triggered. If your TRX sheet update is pending, re-attempt in 10s.";
-            }
-        }
-
-        async function triggerClaudePipeline() {
-            const sourcePayload = document.getElementById('rawPayloadInput').value.trim();
-            const agentProfile = document.getElementById('agentPromptSelect').value;
-            const outputLocale = document.getElementById('languageSelect').value;
-            const spinner = document.getElementById('loadingSpinner');
-            const btnText = document.getElementById('btnText');
-            const terminalOutput = document.getElementById('engineTerminalOutput');
-
-            if(!sourcePayload) { alert("Matrix Error: Target execution requires functional input data string."); return; }
-            spinner.classList.remove('hidden'); btnText.innerText = "Compiling Model Directives...";
-            terminalOutput.innerHTML = `<span class="text-sky-400 animate-pulse">Routing parameters to Claude 3.5 Sonnet cluster... Synthesizing multi-agent directives...</span>`;
-
-            setTimeout(() => {
-                spinner.classList.add('hidden'); btnText.innerText = "Execute System-Locked Framework Pipeline";
-                let finalizedResponseString = "";
-
-                if (agentProfile === "aegis_auditor") {
-                    finalizedResponseString = `AEGIS T&C AUDITOR SESSION INITIALIZED[cite: 1]\n---------------------------------------\nFINDING #1\nRisk Level: CRITICAL[cite: 1]\nPattern Classification: DP-01 (Roach Motel) + FT-01 (Auto-Renewal Ambush)[cite: 1]\n\nThe Trap: This clause embeds deep structural negative-option locks into your checkout framework. Cancellation methods demand hard administrative paper flow frictions intentionally built to deplete consumer action vectors. Refer to file "AEGIS_TC_Auditor_v2.0_KnowledgeMentor.pdf" for compliance standards.[cite: 1]`;
-                } else if (agentProfile === "financial_controller") {
-                    finalizedResponseString = `## 📒 THE FINANCIAL CONTROLLER & LEDGER ARCHITECT RESPONSE\n---------------------------------------\nGAAP/IFRS METRIC AUDIT LOG:\n- Trial Balance Matching Verification Matrix [BALANCED]\n- System Accounting Invariant Check: Assets = Liabilities + Equity [VERIFIED]\n\nCHART OF ACCOUNTS CONFIGURATION:\n| Code | Account Name | Class | Normal Balance |\n|---|---|---|---|\n| AS-CU-001 | Corporate Ledger Main Treasury | Asset | Dr |`;
-                } else if (agentProfile === "humanized_writer") {
-                    finalizedResponseString = `[✍️ MASTER HUMANIZED WRITER COMPILER LOG]\n---------------------------------------\nExecution Score: Readability Lock Match Complete (55-70 Flesch Range Target).\nSentence Architectural Density Cadence: 2-2-1 Cadence Map deployed smoothly.\nAbstract claims successfully anchored with concrete structural details. Banned phrase patterns purged.`;
-                }
-
-                if (outputLocale !== "English") {
-                    finalizedResponseString += `\n\n[🌐 LOCALIZATION RUNTIME LAYER: Structural dataset output has been parsed and natively rendered into the requested "${outputLocale}" language specification.]`;
-                }
-                terminalOutput.innerText = finalizedResponseString;
-            }, 2300);
-        }
-
-        function copyEngineOutput() {
-            const outText = document.getElementById('engineTerminalOutput').innerText;
-            navigator.clipboard.writeText(outText);
-            alert("Cryptographic data trace pipeline copied to memory block!");
-        }
-
-        const routeParams = new URLSearchParams(window.location.search);
-        const internalMailCtx = routeParams.get('email');
-        if (internalMailCtx) { document.getElementById('accessEmail').value = internalMailCtx; }
-    </script>
-</body>
-</html>
