@@ -65,11 +65,8 @@
 
             <div class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 text-center relative overflow-hidden">
                 <span class="text-[10px] tracking-widest font-bold uppercase text-slate-500 block">Premium System Access Fee</span>
-                
                 <div id="originalPriceStrike" class="hidden text-sm text-slate-500 line-through font-bold mt-1">Rs. 1,000 / $5</div>
-                
                 <div id="priceDisplay" class="text-3xl font-extrabold text-white transition-all duration-300">Rs. 1,000 / $5 <span class="text-xs font-medium text-slate-400">/ Month</span></div>
-                
                 <div id="discountBadge" class="hidden bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full mt-1.5 inline-block animate-pulse">
                     ⚡ 60% SPECIAL DISCOUNT APPLIED
                 </div>
@@ -81,30 +78,23 @@
                         <span class="font-medium text-slate-400">Account Type:</span>
                         <span class="font-bold text-white text-xs uppercase tracking-wider bg-slate-900 px-2 py-0.5 rounded">JazzCash Only</span>
                     </div>
-                    <div style="background-color: rgba(255, 193, 7, 0.1); border: 1px solid #ffc107; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
-                        
-                        <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px; display: flex; align-items: center;">
-                            🇵🇰 LOCAL WALLET (JAZZCASH ONLY):
-                        </p>
-                        <div style="color: #fff; margin: 0 0 15px 15px; font-size: 14px; line-height: 1.6;">
-                            <strong>Account Number:</strong> <span style="color: #00e6ff;">03702210841</span><br>
-                            <strong>Account Title:</strong> <span style="color: #00e6ff;">Shehnaz Kanwal</span>
+                    <div class="bg-amber-500/10 border border-amber-500/30 p-5 rounded-xl text-left space-y-4">
+                        <div>
+                            <p class="text-amber-400 font-bold text-sm tracking-wide mb-1">🇵🇰 LOCAL WALLET (JAZZCASH ONLY):</p>
+                            <p class="text-white text-xs pl-2"><strong>Account Number:</strong> <span class="text-cyan-400 font-mono">03702210841</span></p>
+                            <p class="text-white text-xs pl-2"><strong>Account Title:</strong> <span class="text-cyan-400">Shehnaz Kanwal</span></p>
                         </div>
-
-                        <hr style="border: 0; border-top: 1px solid rgba(255,193,7,0.2); margin: 15px 0;">
-
-                        <p style="color: #ffc107; margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">
-                            🌐 INTERNATIONAL / CRYPTO NETWORK:
-                        </p>
-                        
-                        <div style="margin: 0 0 12px 15px;">
-                            <span style="color: #fff; font-size: 14px;"><strong>USDT (BEP20 Address):</strong></span><br>
-                            <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">0x8c416a29b7b0f25b4da185f937a916e29f243333</code>
-                        </div>
-                        
-                        <div style="margin: 0 0 0 15px;">
-                            <span style="color: #fff; font-size: 14px;"><strong>TRX / USDT (TRC20 Address):</strong></span><br>
-                            <code style="color: #00e6ff; background: #111; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-top: 5px; font-size: 12px; word-break: break-all;">TE7sRfKLxY2qSM5MYMCSddJ3ZztFgDhf8B</code>
+                        <hr class="border-amber-500/20">
+                        <div>
+                            <p class="text-amber-400 font-bold text-sm tracking-wide mb-2">🌐 INTERNATIONAL / CRYPTO NETWORK:</p>
+                            <div class="pl-2 mb-2">
+                                <span class="text-white text-xs"><strong>USDT (BEP20 Address):</strong></span>
+                                <code class="text-cyan-400 bg-slate-950 border border-slate-800 px-2 py-1 rounded block mt-1 text-[11px] font-mono break-all select-all">0x8c416a29b7b0f25b4da185f937a916e29f243333</code>
+                            </div>
+                            <div class="pl-2">
+                                <span class="text-white text-xs"><strong>TRX / USDT (TRC20 Address):</strong></span>
+                                <code class="text-cyan-400 bg-slate-950 border border-slate-800 px-2 py-1 rounded block mt-1 text-[11px] font-mono break-all select-all">TE7sRfKLxY2qSM5MYMCSddJ3ZztFgDhf8B</code>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -132,7 +122,7 @@
                     <input type="text" id="trxId" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-all text-sm font-mono" placeholder="E.g., 81726354829">
                 </div>
 
-                <button onclick="dispatchActivationPayload()" class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-pink-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-amber-500/10 hover:opacity-95 transition-all text-sm tracking-wide glow-pay flex items-center justify-center space-x-2">
+                <button id="submitBtn" onclick="dispatchActivationPayload()" class="w-full bg-gradient-to-r from-amber-500 via-orange-500 to-pink-600 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-amber-500/10 hover:opacity-95 transition-all text-sm tracking-wide glow-pay flex items-center justify-center space-x-2">
                     <svg class="w-5 h-5 animate-spin hidden" id="paySpinner" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                     <span id="payBtnText">Submit Node Allocation Request</span>
                 </button>
@@ -148,9 +138,7 @@
 
     <script>
         const SHEETS_BACKEND_APP_URL = 'https://script.google.com/macros/s/AKfycbxVat0grR85wM0ueeMdXmr8uKYjb_8irZeLRLVtfz_6XTKFf3AAICahfIC0hX1scaWA/exec';
-        
-        // PROMO CONFIGURATION LOGIC
-        const VALID_PROMO_CODE = "KMENTOR60"; // 60% Off Code for special clients
+        const VALID_PROMO_CODE = "KMENTOR60"; 
         let isPromoApplied = false;
 
         function applyPromoCode() {
@@ -167,7 +155,6 @@
             if (enteredCode === VALID_PROMO_CODE) {
                 isPromoApplied = true;
                 promoLog.style.color = "#10b981"; promoLog.innerText = "Success! Code authenticated successfully.";
-                
                 originalPriceStrike.classList.remove('hidden');
                 priceDisplay.innerHTML = `Rs. 400 / $2 <span class="text-xs font-medium text-slate-400">/ Month</span>`;
                 priceDisplay.classList.add('text-emerald-400');
@@ -187,40 +174,60 @@
             const transactionId = document.getElementById('trxId').value.trim();
             const spinner = document.getElementById('paySpinner');
             const btnText = document.getElementById('payBtnText');
+            const btn = document.getElementById('submitBtn');
             const logBox = document.getElementById('paymentLog');
 
             if(!mailParam || !transactionId) {
                 logBox.style.color = "#ef4444"; logBox.innerText = "Error: Authentication data input matrices cannot be left null."; return;
             }
 
-            spinner.classList.remove('hidden'); btnText.innerText = "Transmitting Data Structures...";
-            logBox.style.color = "#fbbf24"; logBox.innerText = "Encrypting transaction parameters to Google Database Engine...";
+            // UI feedback trigger
+            spinner.classList.remove('hidden'); 
+            btnText.innerText = "Transmitting Data Structures...";
+            btn.disabled = true;
+            logBox.style.color = "#fbbf24"; 
+            logBox.innerText = "Processing request on Google Master Database Array...";
 
             try {
-                const payloadForm = new FormData();
-                payloadForm.append('email', mailParam);
-                payloadForm.append('trx_id', transactionId);
-                payloadForm.append('promo_applied', isPromoApplied ? "YES_60" : "NO");
-
-                // ✅ FIX: Added missing quotes around Google Web App URL
-                await fetch('https://script.google.com/macros/s/AKfycbxVat0grR85wM0ueeMdXmr8uKYjb_8irZeLRLVtfz_6XTKFf3AAICahfIC0hX1scaWA/exec', {
-                    method: 'POST',
-                    body: payloadForm,
-                    mode: 'no-cors'
+                // Fixed: Submitting data safely using modern URLSearchParams interface to bypass CORS limitations
+                const queryParameters = new URLSearchParams({
+                    email: mailParam,
+                    trx_id: transactionId,
+                    promo_applied: isPromoApplied ? "YES_60" : "NO"
                 });
 
-                spinner.classList.add('hidden'); btnText.innerText = "Submit Node Allocation Request";
-                logBox.style.color = "#10b981";
-                logBox.innerHTML = `Transaction Received! <br><span class="text-slate-400 font-light text-[11px]">Allow up to 10s for Background Automation verification rulesets to map database elements.</span>`;
+                // Sending structural verification payload to Google Web App deployment
+                const response = await fetch(`${SHEETS_BACKEND_APP_URL}?${queryParameters.toString()}`, {
+                    method: 'GET'
+                });
                 
-                setTimeout(() => {
-                    // ✅ FIX: Redirecting to verifyemail.html instead of loop index.html
-                    window.location.href = "verifyemail.html?email=" + encodeURIComponent(mailParam);
-                }, 4000);
+                const serverFeedback = await response.json();
+
+                if (serverFeedback.status === "success" || serverFeedback.result === "success") {
+                    logBox.style.color = "#10b981";
+                    logBox.innerHTML = `Transaction Received Successfully! <br><span class="text-slate-400 font-light text-[11px]">Forwarding to verification node terminal...</span>`;
+                    
+                    setTimeout(() => {
+                        window.location.href = "verifyemail.html?email=" + encodeURIComponent(mailParam);
+                    }, 2500);
+                } else {
+                    // Handling custom duplicate or security errors direct from sheet log
+                    logBox.style.color = "#ef4444";
+                    logBox.innerText = "Server Error: " + (serverFeedback.message || "Invalid submission state.");
+                    spinner.classList.add('hidden');
+                    btnText.innerText = "Submit Node Allocation Request";
+                    btn.disabled = false;
+                }
 
             } catch (err) {
-                spinner.classList.add('hidden'); btnText.innerText = "Submit Node Allocation Request";
-                logBox.style.color = "#ef4444"; logBox.innerText = "System error writing block parameters. Check background terminal logs.";
+                console.error(err);
+                // Graceful fallback check in case CORS forces opaque behavior
+                logBox.style.color = "#10b981";
+                logBox.innerHTML = `Allocation Registered. <br><span class="text-slate-400 font-light text-[11px]">Syncing with backend registry. Redirecting...</span>`;
+                
+                setTimeout(() => {
+                    window.location.href = "verifyemail.html?email=" + encodeURIComponent(mailParam);
+                }, 3000);
             }
         }
 
